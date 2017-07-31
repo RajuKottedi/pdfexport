@@ -25,7 +25,7 @@ kendo.drawing.drawDOM($(selector)).then(function(group){
 
 ```
 ## Reference
-For Configuration http://docs.telerik.com/kendo-ui/framework/drawing/drawing-dom#configuration
+Configuration:  http://docs.telerik.com/kendo-ui/framework/drawing/drawing-dom#configuration
 
 ## Examples
 https://demos.telerik.com/kendo-ui/pdf-export/page-layout
