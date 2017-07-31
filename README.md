@@ -10,7 +10,7 @@ You can also easily include PDF Export in your site using script tag:
 ``` HTML
 <script src="dist/pdfexport.min.js"></script>
  or
- <script src="src/pdfexport.js"></script>
+<script src="src/pdfexport.js"></script>
 ```
 
 ``` Javascript
