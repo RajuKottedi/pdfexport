@@ -19,7 +19,7 @@ You can also easily include PDF Export in your site using script tag:
  or
 <script src="src/pdfexport.js"></script>
 ```
-
+Add this in your script file
 ``` Javascript
 kendo.drawing.drawDOM($(selector)).then(function(group){
     kendo.drawing.pdf.saveAs(group, "Example.pdf");
