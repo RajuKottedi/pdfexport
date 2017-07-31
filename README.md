@@ -13,6 +13,8 @@ Note: `Add jquery script tag before the pdfexport.`
 You can also easily include PDF Export in your site using script tag:
 
 ``` HTML
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 <script src="dist/pdfexport.min.js"></script>
  or
 <script src="src/pdfexport.js"></script>
