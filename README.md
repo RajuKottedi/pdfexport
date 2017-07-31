@@ -4,6 +4,11 @@
 Export HTML to PDF using Kendo UI.
 It is a standalone feature of Kendo UI for exporting HTML to PDF with some modifications.
 
+## Dependencies
+Jquery
+
+Note: `Add jquery script tag before the pdfexport.`
+
 ## Usage
 You can also easily include PDF Export in your site using script tag:
 
