@@ -1,5 +1,5 @@
 /*!
- * PDFExport v1.0.0
+ * PDFExport v1.1.0
  * https://github.com/RajuKottedi/pdfexport
  * Copyright (c) 2017 RajuKottedi
  * Non-commercial - Free
@@ -5630,15 +5630,17 @@
                 function i() {
                     e.console && (e.console.error ? e.console.error("Cannot load URL: %s", t) : e.console.log("Cannot load URL: %s", t)), n(null)
                 }
-                var o = new XMLHttpRequest, byteString, ab, byteArrays, tt;
+                var o = new XMLHttpRequest, byteString, ab, byteArrays, tt, fileURL = t;
                 tt = t.replace("data:application/font-ttf;charset=utf-8;base64,", "");
-                byteString = atob(tt);
-                ab = new ArrayBuffer(byteString.length);
-                byteArrays = new Uint8Array(ab);
-                for (var fidaa = 0; fidaa < byteString.length; fidaa++) {
-                    byteArrays[fidaa] = byteString.charCodeAt(fidaa);
+                if(t != tt){
+                    byteString = atob(tt);
+                    ab = new ArrayBuffer(byteString.length);
+                    byteArrays = new Uint8Array(ab);
+                    for (var fidaa = 0; fidaa < byteString.length; fidaa++) {
+                        byteArrays[fidaa] = byteString.charCodeAt(fidaa);
+                    }
+                fileURL = URL.createObjectURL(new Blob([byteArrays], { type: 'application/font-ttf' }));
                 }
-                var fileURL = URL.createObjectURL(new Blob([byteArrays], { type: 'application/font-ttf' }));
                 o.open("GET", fileURL, !0), ne && (o.responseType = "arraybuffer"), o.onload = function () {
                     200 == o.status || 304 == o.status ? n(ne ? new Uint8Array(o.response) : new VBArray(o.responseBody).toArray()) : i()
                 }, o.onerror = i, o.send(null)
